@@ -1,10 +1,13 @@
 \c scottfujimoto
 --1
 DROP USER IF EXISTS michael;
+
 --2
 CREATE USER michael WITH ENCRYPTED PASSWORD 'loislane143';
+
 --3
 DROP DATABASE IF EXISTS todo_app;
+
 --4
 CREATE DATABASE todo_app;
 
@@ -24,6 +27,7 @@ CREATE TABLE tasks (
 
 --9
 ALTER TABLE tasks DROP COLUMN completed;
+
 --10
 ALTER TABLE tasks ADD COLUMN completed_at timestamp DEFAULT NULL;
 
