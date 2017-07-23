@@ -41,6 +41,14 @@ SELECT title
 FROM tasks
 WHERE completed_at is NULL;
 
+UPDATE tasks
+SET completed_at = NOW()
+WHERE title = 'Study SQL';
+
+SELECT title, description
+FROM tasks
+WHERE completed_at is NULL;
+
 SELECT * FROM tasks ORDER BY created_at DESC;
 
 INSERT INTO tasks (title, description)
